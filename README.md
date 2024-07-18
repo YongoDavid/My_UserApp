@@ -1,1 +1,16 @@
-# My_UserApp
+# Welcome to My Users App
+This project is called my User App and just as the name , it is a basic User Application that handles CRUD operations. CRUD meaning , Create , Read , Update and Delete.
+
+# Task
+TODO - What is the problem? And where is the challenge? In this Project we will be creating Database that stores new users thhat are created and all thier information. Information like , First name , Last name , age , password and Email. When the user is created the users information should be stored in the database and the password should be hashed. Also in this project i made use of sqlite3.
+
+# Description
+Here is will provide you with the step by step process you should use to test/run this project properly. Step 1: Run { bundle install } This to install gems required for this project Step 2: Run { ruby app.rb } This is to start the sinatra server Step 3: After the server has started open a new termianl Step 4: Run { curl -X POST http://localhost:8080/users -d "firstname=Qwasar&lastname=Team&age=30&password=Qwasar123&email=Qwasar@gmail.com" -H "Content-Type: application/x-www-form-urlencoded" } In the new terminal run this command to create a new user, i have filled in details already for a new user just paste the above command. Step 5: Run { curl -X POST http://localhost:8080/sign_in -d "email=Qwasar@gmail.com&password=Qwasar123" -c cookies.txt -H "Content-Type: application/x-www-form-urlencoded" } This command is to Sign in the user created, i have filled in details already for the new user Sign in just paste the above command. Step 6: Run { curl -X PUT http://localhost:8080/users -d "new_password=Outsource123" -b cookies.txt -H "Content-Type: application/x-www-form-urlencoded" } This command is to update a new password , i have filled in details already for the new password just paste the above command. Step 7: Run{ curl -X DELETE http://localhost:8080/sign_out -b cookies.txt } This command is to sign out the user. Step 8: Run { curl -X POST http://localhost:8080/sign_in -d "email=Qwasar@gmail.com&password=Outsource123" -c cookies.txt -H "Content-Type: application/x-www-form-urlencoded" } This command is to sign in with the new password created. Step 9: Run { curl -X DELETE http://localhost:8080/users -b cookies.txt } This command is to delete the user. Step 10: Run { curl -X GET http://localhost:8080/users } This command is to get all the users Step 11: In your brower run this url { https://web-hf7d1a239-cb84.docode.fi.qwasar.io/#/home/docode/project } This is to view all the users outside the terminal on your brower.
+
+# Note: After each command in the new terminal check the terminal used to start the server for the response to all your commands(Requests) Note: Make sure to copy the command inside the brackets and not with the brackets. Note: Make sure to run all the command when the server is running.
+
+# Installation
+TODO - How to install your project? npm install? make? make re? In this project i made use of different gems that would aid the development of this project. All these gems were required in the right files and also in the file (GenFile) Some of this gems are : gem 'sinatra' gem 'sinatra-contrib' gem 'sqlite3' gem 'bcrypt' gem "rackup", "~> 2.1"
+
+# Usage
+users are created and thier information is stored in a database. A user can sign in , change thier passowrd and then sign in with the new password. A user can then log out and also delete thier profile. all these is aided by the use of sessions and cookies in this User App peoject.
